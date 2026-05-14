@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Airflow
+logs/
+airflow.cfg
+
+# Environment
+.env
+
+# VS Code
+.vscode/
+
+# Data files (optional)
+data/processed/
+
+# other
+airflow/logs/
+postgres-db-volume/
