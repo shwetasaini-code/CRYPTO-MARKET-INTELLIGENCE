@@ -1,11 +1,11 @@
-import logging
-from datetime import datetime
+from scripts.logger_crypto import logger
+from datetime import datetime, timezone
 import pandas as pd
 import ast
 
 
 def transform_crypto_data():
-    logging.info('Transforming Crypto Data !!!!')
+    logger.info('Transforming Crypto Data !!!!')
     df = pd.read_csv('data/raw/crypto_coins_raw.csv')
 
     selected_columns = [
@@ -18,7 +18,8 @@ def transform_crypto_data():
         "roi"
     ]
     df = df[selected_columns]
-    df['stamp_time']= datetime.now()
+    df['stamp_time'] = datetime.now(
+        timezone.utc).replace(second=0, microsecond=0)
 
     df['roi'] = df['roi'].apply(
         lambda x: ast.literal_eval(x) if pd.notna(x) else None)
@@ -42,4 +43,4 @@ def transform_crypto_data():
 
     # print(df.info())
 
-    logging.info("Data cleaning completed.. ✔️")
+    logger.info("Data cleaning completed.. ✔️")

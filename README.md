@@ -60,13 +60,17 @@ SQL Analytics
 
 ## Start Airflow
 
-</> bash
+```bash
 docker compose up
+```
 
 ## Open Airflow UI
 
+```text
 http://localhost:8080
+```
 
+---
 
 # 🔐 Airflow Connection
 
@@ -75,3 +79,13 @@ Create PostgreSQL connection in Airflow UI:
 - Connection ID: `crypto_postgres`
 - Host: `postgres`
 - Database: `crypto_intelligence_db`
+
+## Project Screenshots
+
+![alt text](assets/airflow-dag.png)
+
+![alt text](assets/aiflow-logs.png)
+
+![alt text](assets/postgres-data.png)
+
+![alt text](assets/vs-architecture.png)

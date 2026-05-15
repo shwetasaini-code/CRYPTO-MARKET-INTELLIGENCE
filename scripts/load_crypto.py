@@ -1,5 +1,5 @@
 import pandas as pd
-import logging
+from scripts.logger_crypto import logger
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 def load_coins_to_postgre():
@@ -11,7 +11,7 @@ def load_coins_to_postgre():
 
         df.to_sql('crypto_market_data', engine, if_exists='append', index=False)
 
-        logging.info(f"{len(df)} records loaded successfully into PostgreSQL ✅")
+        logger.info(f"{len(df)} records loaded successfully into PostgreSQL ✅")
     except Exception as e:
-        logging.info("Data Loading to Postgre failed.❌")
+        logger.info("Data Loading to Postgre failed.❌")
         raise e
