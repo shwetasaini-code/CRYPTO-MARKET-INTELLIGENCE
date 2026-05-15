@@ -4,14 +4,15 @@ A production-style ETL pipeline built using Python, Apache Airflow, PostgreSQL, 
 
 ---
 
-# 📌 Project Overview
+## 📌 Project Overview
 
 This project extracts cryptocurrency market data from the CoinGecko API, transforms the data using pandas, stores historical snapshots in PostgreSQL, and orchestrates the workflow using Apache Airflow.
 
 ---
 
-# 🏗️ Architecture
+## 🏗️ Architecture
 
+```text
 CoinGecko API
 ↓
 Python Extraction
@@ -23,10 +24,9 @@ PostgreSQL
 Airflow DAG Orchestration
 ↓
 SQL Analytics
+```
 
----
-
-# ⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 - Python
 - Apache Airflow
@@ -38,7 +38,7 @@ SQL Analytics
 
 ---
 
-# 🔄 Pipeline Flow
+## 🔄 Pipeline Flow
 
 1. Extract cryptocurrency market data from CoinGecko API
 2. Transform and clean data using pandas
@@ -48,13 +48,15 @@ SQL Analytics
 
 ---
 
-# 📊 Features
+## 📊 Features
 
 - Automated ETL pipeline
 - Airflow DAG orchestration
 - PostgreSQL integration
 - Historical crypto data storage
 - Retry handling and logging
+
+---
 
 # 🚀 Running the Project
 
@@ -72,7 +74,7 @@ http://localhost:8080
 
 ---
 
-# 🔐 Airflow Connection
+## 🔐 Airflow Connection
 
 Create PostgreSQL connection in Airflow UI:
 
